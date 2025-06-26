@@ -23,7 +23,7 @@ export const Navigation: React.FC<NavigationProps> = ({
   ];
 
   return (
-    <nav className="bg-gray-900 border-t border-gray-800">
+    <nav className="bg-gray-900 border-t border-gray-800 fixed bottom-0 left-0 w-full z-50">
       <div className="flex justify-around items-center py-2">
         {navItems.map(({ id, icon: Icon, label }) => (
           <button
