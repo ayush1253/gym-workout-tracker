@@ -79,11 +79,11 @@ export const AnalyticsScreen: React.FC = () => {
   const personalRecords = getPersonalRecords();
   const exerciseProgressData = selectedExercise ? getExerciseProgress(selectedExercise) : [];
 
-  const availableExercises = [...new Set(progressData.map(d => d.exerciseId))]
-    .map(id => ({
-      id,
-      name: exercises.find(e => e.id === id)?.name || id
-    }));
+  const availableExercises = Array.from(new Set(progressData.map(d => d.exerciseId)))
+  .map(id => ({
+    id,
+    name: exercises.find(e => e.id === id)?.name || id
+  }));
 
   return (
     <div className="flex-1 bg-gray-950 text-white p-4 overflow-y-auto">
