@@ -24,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        <script src="/register-sw.js" />
+      </head>
       <body className="min-h-screen bg-gray-950 text-white">
         {children}
       </body>

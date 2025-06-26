@@ -3,6 +3,8 @@ const withPWA = require('next-pwa')({
   dest: 'public',
   register: true,
   skipWaiting: true,
+  scope: '/',
+  sw: 'sw.js',
 });
 
 module.exports = withPWA({
